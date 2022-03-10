@@ -13,11 +13,33 @@
             <h1 id="h1Part2">random password</h1>
             <h2>Never use an insecure password again</h2>
             <button id="btn-el" onclick="displayPassword()">Generate a password</button>
+
+            <span class="checkboxes">
+                <span>
+                    <input type="checkbox" id="uppercasebox" name="Uppercase Letter" checked>
+                    <label for="uppercasebox">Uppercase Letter</label>
+                </span>
+                <span class="checkboxrow2">
+                    <input type="checkbox" id="numericbox" name="Numeric Box" checked>
+                    <label for="numericbox">Numeric</label>
+                </span>
+                <div class="checkboxcoloumn2">
+                    <span>
+                        <input type="checkbox" id="lowercasebox" name="Lowercase Letter" checked>
+                        <label for="lowercasebox">Lowercase Letter</label>
+                    </span>
+                    <span class="checkboxrow2">
+                        <input type="checkbox" id="symbolsbox" name="Symbols Box" checked>
+                        <label for="symbolsbox">Symbols</label>
+                    </span>
+                </div>
+            
             <div class="slidecontainer">
                 <p id="passwordlength-el">Password Length: 10</p>
                 <input type="range" min="6" max="15" value="10" class="slider-el" onchange="changeLength()" id="myRange">
             </div>
-            <div class="divider"></div>
+            
+            <div class="divider"></div> <!--empty div for styling a straight line to divide the container-->
             <div class="firstRow">
                 <p class="passwordbox" class="column1" id="p-el1">...</p>
                 <p class="passwordbox" class="column2" id="p-el2">...</p>

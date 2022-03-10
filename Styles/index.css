@@ -49,10 +49,9 @@ button {
   justify-content: center;
   align-items: center;
   padding: 9px 17px 9px 15px;
-  margin-top: 25px;
 
   position: absolute;
-  width: 223px;
+  width: 200px;
   height: 42px;
   top: 207px;
 
@@ -75,13 +74,14 @@ button {
 
 .firstRow {
   position: absolute;
-  top: 400px;
+  top: 380px;
+  left: 20px;
 }
 
 .secondRow {
   position: absolute;
-  top: 400px;
-  left: 300px;
+  top: 380px;
+  left: 260px;
 }
 
 .passwordbox {
@@ -94,6 +94,25 @@ button {
 }
 
 .slidecontainer {
-  margin-top: 90px;
+  margin-top: 10px;
   color: white;
+}
+
+.checkboxes {
+  margin-left: 210px;
+  font-size: large;
+  color: #fff;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.5);
+}
+
+.checkboxcoloumn2 {
+  margin-left: 210px;
+  margin-top: 10px;
+}
+
+.checkboxrow2 {
+  margin-left: 10px;
 }
