@@ -1,3 +1,4 @@
+// possible characters
 const upperAplhabet = [... "ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
 const lowerAlphabet = [... "abcdefghijklmnopqrstuvwxyz"];
 const numeric = [... "0123456789"];
@@ -5,19 +6,27 @@ const symbols = [... "!%@/?\\*~#"];
 
 let passwordLength = 10;
 
+// elements for displaying generated passwords
 let pEl1 = document.getElementById("p-el1");
 let pEl2 = document.getElementById("p-el2");
 let pEl3 = document.getElementById("p-el3");
 let pEl4 = document.getElementById("p-el4");
 
-let passwordLengthEl = document.getElementById("passwordlength-el")
+// elements for slider and displaying passwordlength
+let passwordLengthEl = document.getElementById("passwordlength-el");
 let range = document.getElementById("myRange");
-console.log(range.value)
+//console.log(range.value);
+
+let upperCheckbox = document.getElementById("uppercasebox");
+let numericCheckbox = document.getElementById("numericbox");
+let lowerCheckbox = document.getElementById("lowercasebox");
+let symbolsCheckbox = document.getElementById("symbolsbox")
 
 // generate random character
 function randomGenerator() {
     let randomChar;
     let selector = randomSelector();
+    selector = checkboxOnOrOff(selector)
     switch (selector) {
         case 1: randomChar = upperAplhabet[Math.floor(Math.random()*upperAplhabet.length)];
         break;
@@ -61,3 +70,61 @@ function displayPassword() {
     pEl4.textContent = generatePassword();
 }
 
+function check(checkboxes) {
+    if(checkboxes.checked === true)
+        return true;
+    else
+        return false;
+}
+
+function checkboxOnOrOff (selection) {
+    let loop = 15; // loop variable 
+    do {
+        if(selection === 1) {
+            if(check(upperCheckbox) === false) {
+                selection++;
+                loop = loop >> 1;
+            }
+            else
+                return selection;
+        }
+        if(selection === 2) {
+            if(check(lowerCheckbox) === false) {
+                selection++;
+                loop = loop >> 1;
+            }
+            else
+                return selection;
+        }
+        if(selection === 3) {
+            if(check(numericCheckbox) === false) {
+                selection++;
+                loop = loop >> 1;
+            }
+            else
+                return selection;
+        }
+        if(selection === 4) {
+            if(check(symbolsCheckbox) === false) {
+                selection = 1
+                loop = loop >> 1;
+            }
+            else
+                return selection;
+        }
+    }while(loop != 0);
+    return 0;
+}
+
+// if(check(upperCheckbox) === false)  {
+//     if(check(numericCheckbox) === true) 
+//         return selection + 1;
+//     else if(check(lowerAlphabet) === true)
+//         return selection + 2;
+//     if(check(symbolsCheckbox === false))
+//         return 0;
+// }else
+// if(check(numericCheckbox) === false) {
+//     if(check(lowerCheckbox) === false)
+//         if()
+// }
