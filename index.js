@@ -70,6 +70,7 @@ function displayPassword() {
     pEl4.textContent = generatePassword();
 }
 
+// check if the chechkbox is true or false
 function check(checkboxes) {
     if(checkboxes.checked === true)
         return true;
@@ -77,6 +78,8 @@ function check(checkboxes) {
         return false;
 }
 
+// provide a solution if the randomnize selector is turned off through the checkboxes
+// using bitshifting to break out of the loop
 function checkboxOnOrOff (selection) {
     let loop = 15; // loop variable 
     do {
@@ -115,16 +118,3 @@ function checkboxOnOrOff (selection) {
     }while(loop != 0);
     return 0;
 }
-
-// if(check(upperCheckbox) === false)  {
-//     if(check(numericCheckbox) === true) 
-//         return selection + 1;
-//     else if(check(lowerAlphabet) === true)
-//         return selection + 2;
-//     if(check(symbolsCheckbox === false))
-//         return 0;
-// }else
-// if(check(numericCheckbox) === false) {
-//     if(check(lowerCheckbox) === false)
-//         if()
-// }
