@@ -7,20 +7,20 @@ const symbols = [... "!%@/?\\*~#"];
 let passwordLength = 10;
 
 // elements for displaying generated passwords
-let pEl1 = document.getElementById("p-el1");
-let pEl2 = document.getElementById("p-el2");
-let pEl3 = document.getElementById("p-el3");
-let pEl4 = document.getElementById("p-el4");
+const pEl1 = document.getElementById("p-el1");
+const pEl2 = document.getElementById("p-el2");
+const pEl3 = document.getElementById("p-el3");
+const pEl4 = document.getElementById("p-el4");
 
 // elements for slider and displaying passwordlength
-let passwordLengthEl = document.getElementById("passwordlength-el");
-let range = document.getElementById("myRange");
+const passwordLengthEl = document.getElementById("passwordlength-el");
+const range = document.getElementById("myRange");
 //console.log(range.value);
 
-let upperCheckbox = document.getElementById("uppercasebox");
-let numericCheckbox = document.getElementById("numericbox");
-let lowerCheckbox = document.getElementById("lowercasebox");
-let symbolsCheckbox = document.getElementById("symbolsbox")
+const upperCheckbox = document.getElementById("uppercasebox");
+const numericCheckbox = document.getElementById("numericbox");
+const lowerCheckbox = document.getElementById("lowercasebox");
+const symbolsCheckbox = document.getElementById("symbolsbox")
 
 // generate random character
 function randomGenerator() {
@@ -70,6 +70,7 @@ function displayPassword() {
     pEl4.textContent = generatePassword();
 }
 
+// check if the chechkbox is true or false
 function check(checkboxes) {
     if(checkboxes.checked === true)
         return true;
@@ -77,8 +78,10 @@ function check(checkboxes) {
         return false;
 }
 
+// provide a solution if the randomnize selector is turned off through the checkboxes
+// using bitshifting to break out of the loop
 function checkboxOnOrOff (selection) {
-    let loop = 15; // loop variable 
+    let loop = 15; // loop variable 1111
     do {
         if(selection === 1) {
             if(check(upperCheckbox) === false) {

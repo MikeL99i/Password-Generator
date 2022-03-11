@@ -8,16 +8,17 @@ body {
   position: absolute;
   width: 1253px;
   height: 678px;
+  background: #1f2937;
 
-  background: #1c1c1c;
+  /* background: #1c1c1c; */
 }
 
 .container {
   position: absolute;
   width: 550px;
   height: 550px;
-  left: 62px;
-  top: 164px;
+  left: 50px;
+  top: 100px;
   background: #0c4a6e;
   border: 1px solid white;
 }
@@ -87,7 +88,7 @@ button {
 .passwordbox {
   border: 15px solid #273549;
   background: #273549;
-  width: 150px;
+  width: 180px;
   border-radius: 6px;
   margin-bottom: 20px;
   text-align: center;
