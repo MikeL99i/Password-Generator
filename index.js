@@ -118,16 +118,3 @@ function checkboxOnOrOff (selection) {
     }while(loop != 0);
     return 0;
 }
-
-// if(check(upperCheckbox) === false)  {
-//     if(check(numericCheckbox) === true) 
-//         return selection + 1;
-//     else if(check(lowerAlphabet) === true)
-//         return selection + 2;
-//     if(check(symbolsCheckbox === false))
-//         return 0;
-// }else
-// if(check(numericCheckbox) === false) {
-//     if(check(lowerCheckbox) === false)
-//         if()
-// }
